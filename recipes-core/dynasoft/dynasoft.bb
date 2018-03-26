@@ -7,7 +7,8 @@ LICENSE = "CLOSED"
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "dynasoft.service"
 
-DEPENDS += "qtbase \
+DEPENDS += "libusb1 \
+			qtbase \
 			qtcharts \
 			qtdeclarative \
 			qtgraphicaleffects \

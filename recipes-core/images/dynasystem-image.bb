@@ -9,6 +9,7 @@ CORE_PKGS = " \
   kernel-image \
   kernel-devicetree \
   kernel-modules \
+  openssl \
 "
 
 NETWORKING = " \
@@ -39,6 +40,9 @@ RPI_STUFF = " \
 FILESYSTEMS = " \
   dbus \
   udev \
+  ntfs-3g \
+  ntfsprogs \
+  libntfs-3g \
   ntfs-3g-ntfsprogs \
   exfat-utils \
   dosfstools \

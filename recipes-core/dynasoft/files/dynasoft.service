@@ -1,0 +1,14 @@
+[Unit]
+Description=Starts DYNAsystem application
+Wants=psplash-dynasystem.service
+After=psplash-dynasystem.service
+DefaultDependencies=no
+
+[Service]
+Type=idle
+User=root
+Group=root
+ExecStart=/usr/bin/dynasoft -platform eglfs
+
+[Install]
+WantedBy=sysinit.target

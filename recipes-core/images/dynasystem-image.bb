@@ -85,6 +85,8 @@ IMAGE_INSTALL += " \
   ${OWN_PKGS} \
 "
 
+SPLASH = "psplash-dynasystem"
+
 inherit core-image dynasystem-image
 
 IMAGE_ROOTFS_SIZE ?= "8192"

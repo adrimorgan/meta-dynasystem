@@ -32,6 +32,8 @@ RPI_STUFF = " \
   curl \
   pulseaudio \
   alsa-utils \
+  psplash \
+  rpi-gpio \
 "
 
 FILESYSTEMS = " \
@@ -65,7 +67,6 @@ QT5_PKGS = " \
 "
 
 OWN_PKGS = " \
-  psplash-dynasystem \
   dynasoft \
   dynasoft-scripts \
 "

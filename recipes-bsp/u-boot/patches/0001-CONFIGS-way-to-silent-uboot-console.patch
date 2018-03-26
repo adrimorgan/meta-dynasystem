@@ -1,0 +1,29 @@
+diff --git a/include/configs/rpi.h b/include/configs/rpi.h
+index f8813a07f8..75ed8a467c 100644
+--- a/include/configs/rpi.h
++++ b/include/configs/rpi.h
+@@ -162,5 +162,10 @@
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	BOOTENV
+ 
++#define CONFIG_DISABLE_CONSOLE
++#define CONFIG_SILENT_CONSOLE
++#define CONFIG_SILENT_CONSOLE_UPDATE_ON_SET
++#define CONFIG_SYS_DEVICE_NULLDEV
++#define CONFIG_BOARD_EARLY_INIT_F 1
+ 
+ #endif
+diff --git a/board/raspberrypi/rpi/rpi.c b/board/raspberrypi/rpi/rpi.c
+index 530f149617..70ddc3daa3 100644
+--- a/board/raspberrypi/rpi/rpi.c
++++ b/board/raspberrypi/rpi/rpi.c
+@@ -496,3 +496,9 @@ int ft_board_setup(void *blob, bd_t *bd)
+ 
+ 	return 0;
+ }
++
++int board_early_init_f(void)
++{
++	gd->flags |= (GD_FLG_SILENT | GD_FLG_DISABLE_CONSOLE);
++	return 0;
++}

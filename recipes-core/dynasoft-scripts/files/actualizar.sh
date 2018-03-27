@@ -6,7 +6,7 @@ versionSO="$(awk -F '=version-' '/artifact_name/ {print $2}' "$ficheroSO")"
 
 # primera ejecución, no existe versión
 if [ ! -f "$ficheroData" ]; then
-  echo "artifact_name=version-1" >> ficheroData
+  echo "artifact_name=version-1" > "$ficheroData"
 else
   # existe versión local, será comparada con la versión del SO
   versionData="$(awk -F '=version-' '/artifact_name/ {print $2}' "$ficheroData")"

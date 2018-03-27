@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# this waits the file to be deleted as a confirmation from the UI to update and reboot
+while [ -f /home/symotech/existeActualizacion ]; do
+  # a little wait not to overhead
+  sleep 2
+done

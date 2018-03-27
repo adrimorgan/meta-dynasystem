@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# this just creates an empty file which will be detected by the UI to show a notification
+touch /home/symotech/existeActualizacion

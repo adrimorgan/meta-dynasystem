@@ -27,9 +27,6 @@ INTERNATIONALIZATION = " \
 RPI_STUFF = " \
   nano \
   util-linux \
-  tzdata \
-  tzdata-europe \
-  ntp \
   curl \
   pulseaudio \
   alsa-utils \
@@ -73,6 +70,7 @@ QT5_PKGS = " \
 OWN_PKGS = " \
   dynasoft \
   dynasoft-scripts \
+  mender-update-and-reboot \
 "
 
 # Core files for basic boot, splash screen and Qt dependencies

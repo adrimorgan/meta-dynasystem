@@ -1,0 +1,13 @@
+diff --git a/meta-mender-core/recipes-mender/mender/files/mender.service b/meta-mender-core/recipes-mender/mender/files/mender.service
+index ec77fbc..4122ce5 100644
+--- a/meta-mender-core/recipes-mender/mender/files/mender.service
++++ b/meta-mender-core/recipes-mender/mender/files/mender.service
+@@ -1,6 +1,7 @@
+ [Unit]
+ Description=Mender OTA update service
+-After=systemd-resolved.service
++After=network-online.target
++Wants=network-online.target
+ 
+ [Service]
+ Type=idle

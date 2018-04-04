@@ -14,7 +14,6 @@ fi
 
 # versión del SO es mayor que la versión local, es decir, primera ejecución desde actualización
 if [ -f "$ficheroData" ] && [ "$versionSO" -gt "$versionData" ]; then
-  echo "Dynasystem ha sido actualizado de v"${versionData}" a v"${versionSO}". Reiniciando..."
   systemctl stop NetworkManager
   cp /data/wifi/* /etc/NetworkManager/system-connections/
   cp "$ficheroSO" "$ficheroData"

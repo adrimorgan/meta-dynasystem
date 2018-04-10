@@ -1,0 +1,14 @@
+[Unit]
+Description=Blocks every keyboard input
+Wants=psplash-dynasystem.service
+After=psplash-dynasystem.service
+DefaultDependencies=no
+
+[Service]
+Type=idle
+User=root
+Group=root
+ExecStart=/usr/bin/disable-keyboard-input.sh
+
+[Install]
+WantedBy=sysinit.target

@@ -19,6 +19,4 @@ if [ -f "$ficheroData" ] && [ "$versionSO" -gt "$versionData" ]; then
   cp "$ficheroSO" "$ficheroData"
   systemctl start NetworkManager
   dhcpcd
-else
-  echo "El sistema no necesita ser actualizado."
 fi

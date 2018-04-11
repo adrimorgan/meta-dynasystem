@@ -1,5 +1,5 @@
 SUMMARY = "Core image for DynaSystem machine"
-LICENSE = "MIT"
+LICENSE = "GPLv3"
 
 GLIBC_GENERATE_LOCALES = "es_ES.UTF-8 en_GB.UTF-8 en_US.UTF-8"
 IMAGE_LINGUAS = " es-es"
@@ -70,6 +70,7 @@ QT5_PKGS = " \
 OWN_PKGS = " \
   dynasoft \
   dynasoft-scripts \
+  disable-keyboard-input \
   mender-update-and-reboot \
 "
 

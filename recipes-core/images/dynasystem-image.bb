@@ -13,11 +13,10 @@ CORE_PKGS = " \
 "
 
 NETWORKING = " \
-  iw \
-  wireless-tools \
+  connman \
+  connman-client \
+  libconnman-qt5 \
   wpa-supplicant \
-  dhcpcd \
-  networkmanager \
 "
 
 INTERNATIONALIZATION = " \
@@ -49,8 +48,12 @@ FILESYSTEMS = " \
 FONTS = " \
   fontconfig \
   fontconfig-utils \
-  ttf-bitstream-vera \
-  font-bitstream-100dpi \
+  ttf-dejavu-sans \
+  ttf-dejavu-sans-mono \
+  ttf-dejavu-sans-condensed \
+  ttf-dejavu-serif \
+  ttf-dejavu-serif-condensed \
+  ttf-dejavu-common \
 "
 
 QT5_PKGS = " \
@@ -70,7 +73,6 @@ QT5_PKGS = " \
 OWN_PKGS = " \
   dynasoft \
   dynasoft-scripts \
-  disable-keyboard-input \
   mender-update-and-reboot \
 "
 

@@ -1,0 +1,14 @@
+[Unit]
+Description=Watches DYNAsystem application
+Wants=psplash-dynasystem.service
+After=psplash-dynasystem.service
+DefaultDependencies=no
+
+[Service]
+Type=idle
+User=root
+Group=root
+ExecStart=/usr/bin/dynasoft-watcher.sh
+
+[Install]
+WantedBy=sysinit.target

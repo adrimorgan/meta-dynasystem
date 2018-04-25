@@ -70,6 +70,7 @@ QT5_PKGS = " \
 OWN_PKGS = " \
   dynasoft \
   dynasoft-scripts \
+  hardware-update \
   disable-keyboard-input \
   mender-update-and-reboot \
 "

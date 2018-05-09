@@ -2,8 +2,8 @@ SRC_URI += "file:///home/symotech/actualizacionControladora.hex"
 LICENSE = "CLOSED"
 
 do_install() {
-	install -d ${D}/actualizacion/hex
-	install -m 0700 ${WORKDIR}/home/symotech/actualizacionControladora.hex ${D}/actualizacion/hex
+	install -d ${D}/actualizacion
+	install -m 0700 ${WORKDIR}/home/symotech/actualizacionControladora.hex ${D}/actualizacion
 }
 
-FILES_${PN} = "/actualizacion/hex/actualizacionControladora.hex"
+FILES_${PN} = "/actualizacion/actualizacionControladora.hex"

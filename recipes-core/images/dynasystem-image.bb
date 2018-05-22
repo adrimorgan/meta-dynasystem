@@ -1,9 +1,18 @@
 SUMMARY = "Core image for DynaSystem machine"
 LICENSE = "GPLv3"
 
+# needed for chosen Qt keyboard languages
 GLIBC_GENERATE_LOCALES = "es_ES.UTF-8 en_GB.UTF-8 en_US.UTF-8"
 IMAGE_LINGUAS = " es-es"
 
+# inherit parameters, and chosen linux kernel
+inherit core-image dynasystem-image
+DISABLE_RPI_BOOT_LOGO = "1"
+
+##################################################################
+#
+# Groups of needed packages
+#
 CORE_PKGS = " \
   linux-firmware-bcm43430 \
   kernel-image \
@@ -75,6 +84,8 @@ OWN_PKGS = " \
   mender-update-and-reboot \
 "
 
+##################################################################
+
 # Core files for basic boot, splash screen and Qt dependencies
 IMAGE_FEATURES += "autologin ssh-server-dropbear"
 IMAGE_INSTALL += " \
@@ -88,8 +99,3 @@ IMAGE_INSTALL += " \
   ${QT5_PKGS} \
   ${OWN_PKGS} \
 "
-
-inherit core-image dynasystem-image
-
-IMAGE_ROOTFS_SIZE ?= "8192"
-IMAGE_ROOTFS_EXTRA_SPACE_append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"

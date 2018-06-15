@@ -1,0 +1,1 @@
+CMDLINE_append = " logo.nologo"

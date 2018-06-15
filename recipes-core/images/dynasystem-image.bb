@@ -7,7 +7,6 @@ IMAGE_LINGUAS = " es-es"
 
 # inherit parameters, and chosen linux kernel
 inherit core-image dynasystem-image
-DISABLE_RPI_BOOT_LOGO = "1"
 
 ##################################################################
 #
@@ -51,6 +50,7 @@ FILESYSTEMS = " \
   libntfs-3g \
   ntfs-3g-ntfsprogs \
   exfat-utils \
+  fuse-exfat \
   dosfstools \
   libusb1 \
 "
